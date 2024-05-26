@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIT Projects</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+   body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Style the tabs */
+.nav-tabs {
+  border-bottom: 3px solid #4CAF50;
+}
+
+.nav-tabs .nav-link {
+  color: #333;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-right: 5px;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Active tab styles */
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  border-bottom: 3px solid #4CAF50;
+}
+
+/* Hover styles */
+.nav-tabs .nav-link:hover {
+  background-color: #ccc;
+}
+
+/* Content area styles */
+.tab-content {
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-pane h3 {
+  color: #4CAF50;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tab-pane p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.tab-pane ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tab-pane ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tab-pane ul li::before {
+  content: "\2022";
+  color: #4CAF50;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.advantage {
+  width: 48%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.advantage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.advantage h3 {
+  color: #4CAF50;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.advantage p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (max-width: 767px) {
+  .advantage {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+   
+    <!-- Nav tabs -->
+    
+    <!-- Tab panes -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">VIT Projects</h1>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="sdp-tab" data-toggle="tab" href="#sdp" role="tab" aria-controls="sdp" aria-selected="true">SDP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="edi-tab" data-toggle="tab" href="#edi" role="tab" aria-controls="edi" aria-selected="false">EDI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="dt-tab" data-toggle="tab" href="#dt" role="tab" aria-controls="dt" aria-selected="false">DT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="course-tab" data-toggle="tab" href="#course" role="tab" aria-controls="course" aria-selected="false">Course Projects</a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="sdp" role="tabpanel" aria-labelledby="sdp-tab">
+              <h3>Software Design and principles (SDP)</h3>
+              <p>Software design principles are fundamental concepts used in software engineering to guide the development of software systems. They help developers create code that is easier to maintain, understand, and extend.</p>
+              <ul>
+                <li>Elevated Code Integrity: Adherence to software design principles elevates the integrity of code, fostering clarity and maintainability.</li>
+                <li>Augmented Component Reusability: Design principles foster modularization and enhanced reusability of components, facilitating the development of adaptable software solutions.</li>
+                <li>Streamlined Maintenance: Well-implemented software design principles streamline maintenance tasks, ensuring swift updates and modifications.</li>
+                <li>Scalability Empowerment: By adhering to design principles, software systems become inherently scalable, capable of accommodating evolving demands and expanding user bases.</li>
+                <li>Complexity Mitigation: The adoption of design principles alleviates software complexity, promoting comprehensibility and ease of troubleshooting.</li>
+                <li>Heightened Development Efficiency: Implementation of design principles catalyzes development efficiency, optimizing workflows and fostering a productive coding environment.</li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="edi" role="tabpanel" aria-labelledby="edi-tab">
+              <h3>EDI</h3>
+              <p>This EDI project involves the development of a new system that integrates software and hardware components. It requires extensive literature survey and aims to benefit others by providing a solution to a real-world problem.he EDI project entails the seamless integration of software and hardware components to create a cohesive system that effectively addresses specific needs or challenges.: Extensive literature survey forms a crucial aspect of the project, involving in-depth research into existing technologies, methodologies, and best practices relevant to the project domain. This comprehensive understanding serves as a foundation for informed decision-making and innovative problem-solving.</p>
+            </div>
+            <div class="tab-pane fade" id="dt" role="tabpanel" aria-labelledby="dt-tab">
+              <h3>Design Thinking (DT)</h3>
+              <p>This project focuses on applying Design Thinking principles to research and publishing a paper based on the findings.The EDI project entails the seamless integration of software and hardware components to create a cohesive system that effectively addresses specific needs or challenges.Extensive literature survey forms a crucial aspect of the project, involving in-depth research into existing technologies, methodologies, and best practices relevant to the project domain. This comprehensive understanding serves as a foundation for informed decision-making and innovative problem-solving.</p>
+              <div class="advantages">
+                <div class="advantage">
+                  <h3>Innovative Approach</h3>
+                  <p>The project offers an innovative approach to solving complex problems through empathy, ideation, and prototyping.</p>
+                </div>
+                <div class="advantage">
+                  <h3>Collaborative Environment</h3>
+                  <p>It fosters a collaborative environment where interdisciplinary teams work together to achieve common goals.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="course" role="tabpanel" aria-labelledby="course-tab">
+              <h3>Course Projects</h3>
+              <p>The course project is a culmination of our learning from each subject, where we apply the implementation logic and understanding gained during the course. It serves as a practical demonstration of our knowledge and skills, showcasing how we can effectively translate theory into real-world applications. Additionally, we present our projects through PowerPoint presentations, providing a comprehensive overview and demonstration of our work to the audience.</p>
+            </div>
+          </div>
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- Bootstrap JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <!-- Custom JavaScript for tab switching -->
+      <script>
+        $('#myTab a').on('click', function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        });
+      </script>
+    </body>
+    </html>

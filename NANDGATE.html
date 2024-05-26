@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAND Gate LED Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.input input {
+    display: none;
+}
+
+.input label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.input input:checked + label {
+    background-color: #28a745;
+}
+
+.output {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="checkbox" id="input1" onchange="updateOutput()">
+            <label for="input1">Input 1</label>
+        </div>
+        <div class="input">
+            <input type="checkbox" id="input2" onchange="updateOutput()">
+            <label for="input2">Input 2</label>
+        </div>
+        <div class="output" id="output"></div>
+    </div>
+    <script>
+        function updateOutput() {
+    var input1 = document.getElementById('input1').checked;
+    var input2 = document.getElementById('input2').checked;
+    var output = document.getElementById('output');
+
+    // Implement NAND gate logic
+    if (input1 && input2) {
+        output.style.backgroundColor = '#ddd'; // LED off
+    } else {
+        output.style.backgroundColor = '#dc3545'; // LED on
+    }
+}
+
+    </script>
+</body>
+</html>

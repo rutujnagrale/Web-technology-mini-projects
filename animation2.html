@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Square Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.animation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    transform-origin: center;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Define keyframes for the rotating and color-changing animation */
+@keyframes rotateColorChange {
+    0% {
+        transform: rotate(0deg);
+        background-color: #007bff;
+    }
+    25% {
+        transform: rotate(90deg);
+        background-color: #28a745;
+    }
+    50% {
+        transform: rotate(180deg);
+        background-color: #ffc107;
+    }
+    75% {
+        transform: rotate(270deg);
+        background-color: #dc3545;
+    }
+    100% {
+        transform: rotate(360deg);
+        background-color: #007bff;
+    }
+}
+
+</style>
+<body>
+    <div class="animation-container">
+        <div class="square"></div>
+    </div>
+    <button id="start-button">Start Animation</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const square = document.querySelector('.square');
+    const startButton = document.getElementById('start-button');
+
+    startButton.addEventListener('click', () => {
+        square.style.animation = 'rotateColorChange 4s linear infinite';
+    });
+});
+
+    </script>
+</body>
+</html>

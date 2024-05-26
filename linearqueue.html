@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Queue Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.queue-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.queue {
+    display: flex;
+    border: 2px solid #000;
+    padding: 10px;
+    background-color: #fff;
+    width: 300px;
+    min-height: 50px;
+    position: relative;
+}
+
+.queue-item {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    animation: appear 0.5s ease-in-out;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+</style>
+<body>
+    <div class="queue-container">
+        <div class="queue"></div>
+    </div>
+    <div class="controls">
+        <input type="text" id="enqueue-input" placeholder="Enter value">
+        <button id="enqueue-button">Enqueue</button>
+        <button id="dequeue-button">Dequeue</button>
+    </div>
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const queueContainer = document.querySelector('.queue');
+    const enqueueInput = document.getElementById('enqueue-input');
+    const enqueueButton = document.getElementById('enqueue-button');
+    const dequeueButton = document.getElementById('dequeue-button');
+
+    const queue = [];
+
+    function updateQueue() {
+        queueContainer.innerHTML = '';
+        queue.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'queue-item';
+            div.textContent = item;
+            queueContainer.appendChild(div);
+        });
+    }
+
+    enqueueButton.addEventListener('click', () => {
+        const value = enqueueInput.value.trim();
+        if (value) {
+            queue.push(value);
+            enqueueInput.value = '';
+            updateQueue();
+        }
+    });
+
+    dequeueButton.addEventListener('click', () => {
+        if (queue.length > 0) {
+            queue.shift();
+            updateQueue();
+        }
+    });
+
+    enqueueInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+            enqueueButton.click();
+        }
+    });
+});
+
+   </script>
+</body>
+</html>
